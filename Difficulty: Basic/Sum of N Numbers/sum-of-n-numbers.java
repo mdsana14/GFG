@@ -1,10 +1,10 @@
 class Solution {
     public static int nSum(int n) {
+        // code here
         
         int ans = 0;
-        while(n != 0){
-            ans += n;
-            n--;
+        for(int i=1;i<=n;i++){
+            ans += i;
         }
         return ans;
     }
