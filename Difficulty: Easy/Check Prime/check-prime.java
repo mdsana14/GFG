@@ -1,20 +1,22 @@
-class Solution {
-    public static boolean prime(int n) {
-        boolean ans = false;
-        int c = 0;
-        for(int i=1;i<=n;i++){
+import java.util.*;
+
+public class Solution {
+    public static void main(String args[]) {
+        Scanner sc = new Scanner(System.in);
+        int n = sc.nextInt();
+        boolean r = true;
+        for(int i=2;i<n;i++){
             if(n % i == 0){
-                c++;
+                r = false;
+                break;
             }
         }
-        if(c==2){
-            ans = true;
+        if(r){
+            System.out.println("True");
         }
         else{
-            ans = false;
+            System.out.println("False");
         }
-            
-        return ans;
         
     }
 }
