@@ -1,13 +1,20 @@
-class Solution {
-    public static int fibonacci(int n) {
-        int n1 = 0;
-        int n2 = 1;
-        int r= 0;
-        for(int i=2;i<=n;i++){
-            r = n1 + n2;
-            n1 = n2;
-            n2 = r;
+import java.util.*;
+
+public class Solution {
+    public static void main(String args[]) {
+        Scanner sc = new Scanner(System.in);
+        int n = sc.nextInt();
+        int a = 0;
+        int b = 1;
+        if(n == 0){
+            System.out.println(0);
+            return;
         }
-        return r;
+        while(n-->1){
+            b = a + b;
+            a = b- a;
+        }
+        System.out.println(b);
+        
     }
 }
